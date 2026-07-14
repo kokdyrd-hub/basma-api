@@ -1,10 +1,9 @@
 import oracledb
 from config import settings
 
-# تشغيل Oracle Thick Mode
-oracledb.init_oracle_client(
-    lib_dir=r"C:\oracle\instantclient_21_19"
-)
+
+# لا تستخدم Thick Mode على Render
+# سيتم استخدام Thin Mode تلقائياً
 
 
 def payroll_connection():
