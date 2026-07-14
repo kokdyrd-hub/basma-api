@@ -1,7 +1,10 @@
 fastapi==0.116.1
 uvicorn[standard]==0.35.0
-oracledb
-python-dotenv
-python-jose[cryptography]
-passlib[bcrypt]
-python-multipart
+python-dotenv==1.1.1
+oracledb==3.2.0
+pydantic==2.11.7
+pydantic-settings==2.10.1
+python-multipart==0.0.20
+PyJWT==2.10.1
+passlib[bcrypt]==1.7.4
+bcrypt==4.3.0
