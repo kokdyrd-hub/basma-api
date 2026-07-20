@@ -79,7 +79,7 @@ def change_password(req: ChangePasswordRequest):
             cur.execute("""
                 UPDATE payroll.emp_login
                 SET PASSWORD = :1, LAST_LOGIN = SYSDATE
-                WHERE EMP_NO = :2
+xx                WHERE EMP_NO = :2
             """, [str(req.new_password), req.emp_no])
         else:
             cur.execute("""
@@ -88,7 +88,9 @@ def change_password(req: ChangePasswordRequest):
             """, [req.emp_no, str(req.new_password)])
 
         conn.commit()
-        return {"success": True, "message": "تم تغيير كلمة المرور بنجاح"}
+        return {"success": True, "message": "
+
+تم تغيير كلمة المرور بنجاح"}
 
     except Exception as e:
         if conn: conn.rollback()
